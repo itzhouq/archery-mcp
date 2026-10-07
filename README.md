@@ -211,6 +211,8 @@ python scripts/smoke_mcp_stdio.py     # MCP stdio 全链路
 
 [itzhouq](https://github.com/itzhouq)，独立开发者，在 [itzhouq.cn](https://itzhouq.cn) 记录 build in public 日常，做的小工具都收录在[工具页](https://itzhouq.cn/tools)。
 
+本项目的开源复盘：[让 AI 只读"看见"生产库：archery-mcp 开源复盘](https://itzhouq.cn/blog/archery-mcp-open-source)
+
 ## License
 
 [MIT](LICENSE)
