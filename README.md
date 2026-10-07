@@ -207,6 +207,10 @@ python scripts/smoke_mcp_stdio.py     # MCP stdio 全链路
 - [Archery](https://github.com/hkadb/archery) —— 本项目封装的平台，SQL 审核与查询治理能力的真正执行者；
 - [ckall/archery-mcp-server](https://github.com/ckall/archery-mcp-server) —— 同生态的另一个优秀实现，思路有别，可对照选用。
 
+## 关于作者
+
+[itzhouq](https://github.com/itzhouq)，独立开发者，在 [itzhouq.cn](https://itzhouq.cn) 记录 build in public 日常，做的小工具都收录在[工具页](https://itzhouq.cn/tools)。
+
 ## License
 
 [MIT](LICENSE)
