@@ -63,3 +63,6 @@ Archery/
 
 # Jupyter
 .ipynb_checkpoints/
+
+# 敏感词本地词表（组织专属标识，绝不入库）
+scripts/sensitive_words.local.txt
