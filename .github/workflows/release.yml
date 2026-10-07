@@ -1,0 +1,39 @@
+# PyPI 发布：push v* tag 触发，使用 Trusted Publishing（无需 token）。
+# 前置一次性配置：PyPI 项目尚未存在时，先在 https://pypi.org/manage/account/publishing/
+# 添加 "Pending Publisher"：owner=itzhouq，repository=archery-mcp，workflow=release.yml，environment=pypi。
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Build
+        run: |
+          python -m pip install build
+          python -m build
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist/
+
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+    environment: pypi
+    permissions:
+      id-token: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist/
+      - name: Publish to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1

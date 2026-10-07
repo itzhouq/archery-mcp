@@ -1,0 +1,40 @@
+name: Bug 报告
+description: 报告 archery-mcp 的问题
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ⚠️ 不要贴真实密码 / TOTP Secret / 内网地址 / 真实表名与数据，请脱敏。
+  - type: input
+    id: archery-version
+    attributes:
+      label: Archery 版本
+      description: Archery 页面页脚可见，如 v1.10.0
+      placeholder: v1.10.0
+    validations:
+      required: true
+  - type: dropdown
+    id: client
+    attributes:
+      label: MCP 客户端
+      options:
+        - Claude Code
+        - Cursor
+        - Codex CLI
+        - 其他
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: 发生了什么
+      description: 脱敏后的错误信息与复现步骤
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期望行为
+    validations:
+      required: true

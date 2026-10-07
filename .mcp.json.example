@@ -1,0 +1,18 @@
+{
+  "mcpServers": {
+    "archery_mcp": {
+      "command": "uvx",
+      "args": ["archery-mcp"],
+      "env": {
+        "ARCHERY_BASE_URL": "https://archery.example.com",
+        "ARCHERY_USERNAME": "你的 Archery 用户名",
+        "ARCHERY_PASSWORD": "你的 Archery 密码",
+        "ARCHERY_TOTP_SECRET": "",
+        "ARCHERY_INSTANCE_NAME": "prod-app-db",
+        "ARCHERY_DB_NAME": "app_db",
+        "ARCHERY_SCHEMA_NAME": "public",
+        "ARCHERY_QUERY_LIMIT": "100"
+      }
+    }
+  }
+}

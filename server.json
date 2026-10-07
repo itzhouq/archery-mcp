@@ -1,0 +1,82 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-10-17/server.schema.json",
+  "name": "io.github.itzhouq/archery-mcp",
+  "title": "Archery MCP",
+  "description": "Unofficial read-only MCP server for the Archery SQL audit platform: list tables, inspect table schema, run read queries and check release SQL through your own Archery instance, with permissions, row limits and data masking enforced by Archery itself.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/itzhouq/archery-mcp",
+  "repository": {
+    "url": "https://github.com/itzhouq/archery-mcp",
+    "source": "github"
+  },
+  "license": {
+    "name": "MIT"
+  },
+  "authors": [
+    {
+      "name": "itzhouq"
+    }
+  ],
+  "keywords": [
+    "archery",
+    "mcp",
+    "database",
+    "sql",
+    "mysql",
+    "postgresql",
+    "schema",
+    "sql-audit"
+  ],
+  "packages": [
+    {
+      "registry_type": "pypi",
+      "identifier": "archery-mcp",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "ARCHERY_BASE_URL",
+          "description": "Base URL of your Archery deployment, e.g. https://archery.example.com",
+          "isRequired": true
+        },
+        {
+          "name": "ARCHERY_USERNAME",
+          "description": "Archery account username (use a dedicated least-privilege account)",
+          "isRequired": true
+        },
+        {
+          "name": "ARCHERY_PASSWORD",
+          "description": "Archery account password",
+          "isRequired": true
+        },
+        {
+          "name": "ARCHERY_TOTP_SECRET",
+          "description": "Base32 TOTP secret if the account enables Google Authenticator 2FA",
+          "isRequired": false
+        },
+        {
+          "name": "ARCHERY_INSTANCE_NAME",
+          "description": "Archery instance name to lock the server to",
+          "isRequired": true
+        },
+        {
+          "name": "ARCHERY_DB_NAME",
+          "description": "Database name to lock the server to",
+          "isRequired": true
+        },
+        {
+          "name": "ARCHERY_SCHEMA_NAME",
+          "description": "Schema name (PostgreSQL usually 'public'; leave empty for MySQL)",
+          "isRequired": false
+        },
+        {
+          "name": "ARCHERY_QUERY_LIMIT",
+          "description": "Default row limit when the query tool is called without limit; 0 delegates the max to Archery",
+          "isRequired": false
+        }
+      ]
+    }
+  ]
+}
