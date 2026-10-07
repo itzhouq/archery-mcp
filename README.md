@@ -1,5 +1,7 @@
 # archery-mcp
 
+<!-- mcp-name: io.github.itzhouq/archery-mcp -->
+
 [![CI](https://github.com/itzhouq/archery-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/itzhouq/archery-mcp/actions/workflows/ci.yml)
 [![PyPI](https://img.shields.io/pypi/v/archery-mcp)](https://pypi.org/project/archery-mcp/)
 [![Python](https://img.shields.io/pypi/pyversions/archery-mcp)](https://pypi.org/project/archery-mcp/)

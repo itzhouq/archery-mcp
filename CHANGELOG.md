@@ -2,6 +2,13 @@
 
 本项目遵循 [Keep a Changelog](https://keepachangelog.com/zh-CN/1.1.0/)，版本号遵循[语义化版本](https://semver.org/lang/zh-CN/)。
 
+## [0.1.1] - 2026-10-07
+
+### Added
+
+- `server.json`（MCP Registry 登记描述文件）与 Registry 自动发布工作流（GitHub OIDC）；
+- README 增加 `mcp-name` 归属验证令牌（MCP 官方 Registry 对 PyPI 包的校验要求）。
+
 ## [0.1.0] - 2026-10-07
 
 首个公开版本。
